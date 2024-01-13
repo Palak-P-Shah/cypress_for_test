@@ -1,4 +1,14 @@
-module.exports = {
-  'projectId': '4b7344',
-  e2e: {},
-}
+const { defineConfig } = require("cypress");
+//import { defineConfig } from "cypress";
+
+module.exports = defineConfig({
+  chromeWebSecurity: false,
+  // modifyObstructiveCode:false,
+    
+  e2e: {
+    supportFile: false,
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
+  },
+});
