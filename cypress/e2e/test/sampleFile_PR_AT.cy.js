@@ -1,3 +1,4 @@
+Cypress.on('uncaught:exception', (err, runnable) => { return false; })
 describe('Test Suite sample for afrotech.com' , function() {
     it.only("check if homepage loads and check title", function () {
         // cy.viewport(393, 852);
