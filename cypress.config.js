@@ -5,7 +5,7 @@ module.exports = defineConfig({
   chromeWebSecurity: false,
   // modifyObstructiveCode:false,
   "env": { 
-    "allureResultsPath": "allure-report",
+    "allureResultsPath": "allure-results",
   },  
   e2e: {
     supportFile: false,
