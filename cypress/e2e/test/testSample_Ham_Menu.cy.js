@@ -2,9 +2,9 @@ describe('Test Suite to check links of Hamburger Menu' , function() {
     it.only("check if Homeandtexture link is working or not in hamburger menu", function () {
         // cy.viewport(393, 852);
         cy.viewport(1920, 1080);
-        cy.visit('https://staging.blavity.com/')
+        cy.visit('https://www.blavity.com/')
+        Cypress.on('uncaught:exception', (err, runnable) => { return false; })
         cy.title().should('eq','The Community for Black Creativity and News - Blavity News')
-        // Cypress.on('uncaught:exception', (err, runnable) => { return false; })
         // cy.get('#nav-menu-toggler > svg')
         // .click()
         // // for homeand texture link in hamburger menu
