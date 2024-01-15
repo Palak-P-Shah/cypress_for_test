@@ -4,7 +4,7 @@ describe('Test Suite sample for homeandtexture.com' , function() {
         // cy.viewport(393, 852);
         cy.viewport(1920, 1080);
         Cypress.on('uncaught:exception', (err, runnable) => { return false; })
-        cy.visit('https://www.homeandtexture.com/')
+        cy.visit('https://homeandtexture.com/')
         cy.once("fail", (err) =>
         {
             return false;
