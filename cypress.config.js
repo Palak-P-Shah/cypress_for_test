@@ -3,6 +3,8 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   chromeWebSecurity: false,
+  experimentalMemoryManagement: true, 
+  screenshotOnRunFailure: false,
   // modifyObstructiveCode:false,
   "env": { 
     "allureResultsPath": "allure-results",
