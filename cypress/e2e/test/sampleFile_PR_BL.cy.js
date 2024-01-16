@@ -7,7 +7,7 @@ describe('Test Suite sample for blavity.com' , function() {
         {
             return false;
         });
-        cy.visit('https://www.blavity.com/')
+        cy.visit('https://blavity.com/')
         cy.once("fail", (err) =>
         {
             return false;
