@@ -7,6 +7,9 @@ describe('Newsletter sign-up with Fixture Data', ()=>{
         cy.visit('https://staging.blavity.com')
         logFunction("This is for test text to log :");
         Cypress.on('uncaught:exception', (err, runnable) => { return false; });
+        cy.wait(2000);
+        cy.get('.loader')
+        .should('not.exist');
         cy.fixture('email').then(function(email)
         {
             this.email=email
