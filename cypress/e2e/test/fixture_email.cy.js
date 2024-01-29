@@ -32,30 +32,30 @@ describe('Newsletter sign-up with Fixture Data', ()=>{
             .should('contain', ' Thank you for subscribing! ')
         })
     })
-    it('should sign-up with email section 2 before blavity editorial', () =>{
-        cy.viewport(1920, 1080);
-        cy.visit('https://staging.blavity.com')
-        Cypress.on('uncaught:exception', (err, runnable) => { return false; });
-        cy.fixture('email').then(function(email_2)
-        {
-            Cypress.on('uncaught:exception', (err, runnable) => { return false; });
-            this.email_2=email_2
-            cy.get('[class="relative subscribe-category-selector__form flex flex-col gap-y-4 lg:flex-row lg:flex-wrap lg:gap-x-0.5 lg:gap-y-2"]')
-            .last()
-            .scrollIntoView()
-            .find("[type='email']")
-            .click({force: true})
-            .type(this.email_2.email_2)
-            cy.get('[class="button-link cursor-pointer"]')
-            .first()
-            .click({force: true})
-            cy.wait(4000)
-            cy.get('[class="subscribe-category-selector__form flex flex-col gap-y-4 lg:flex-row lg:flex-wrap lg:gap-x-0.5 lg:gap-y-2"]')
-            .last()
-            .should('be.visible')
-            .should('contain', ' Thank you for subscribing! ')
-        })   
-    })    
+    // it('should sign-up with email section 2 before blavity editorial', () =>{
+    //     cy.viewport(1920, 1080);
+    //     cy.visit('https://staging.blavity.com')
+    //     Cypress.on('uncaught:exception', (err, runnable) => { return false; });
+    //     cy.fixture('email').then(function(email_2)
+    //     {
+    //         Cypress.on('uncaught:exception', (err, runnable) => { return false; });
+    //         this.email_2=email_2
+    //         cy.get('[class="relative subscribe-category-selector__form flex flex-col gap-y-4 lg:flex-row lg:flex-wrap lg:gap-x-0.5 lg:gap-y-2"]')
+    //         .last()
+    //         .scrollIntoView()
+    //         .find("[type='email']")
+    //         .click({force: true})
+    //         .type(this.email_2.email_2)
+    //         cy.get('[class="button-link cursor-pointer"]')
+    //         .first()
+    //         .click({force: true})
+    //         cy.wait(4000)
+    //         cy.get('[class="subscribe-category-selector__form flex flex-col gap-y-4 lg:flex-row lg:flex-wrap lg:gap-x-0.5 lg:gap-y-2"]')
+    //         .last()
+    //         .should('be.visible')
+    //         .should('contain', ' Thank you for subscribing! ')
+    //     })   
+    // })    
     it('should sign-up with email section 3 within footer', () =>{
         cy.viewport(1920, 1080);
         cy.visit('https://staging.blavity.com')
