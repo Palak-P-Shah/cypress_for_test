@@ -1,10 +1,12 @@
 // import { constants } from "../../constants";
 describe('Newsletter sign-up with Fixture Data', ()=>{
-    
+    beforeEach(() => {
+        cy.visit('https://staging.blavity.com')
+      })
     it('should sign-up with email section 1 within Latest News', () =>{
         cy.viewport(1920, 1080);    
         // cy.visit(constants.URL_STG_BLAVITY)
-        cy.visit('https://staging.blavity.com')
+        // cy.visit('https://staging.blavity.com')
         logFunction("This is for test text to log :");
         Cypress.on('uncaught:exception', (err, runnable) => { return false; });
         cy.wait(2000);
