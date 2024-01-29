@@ -1,10 +1,9 @@
 // import { constants } from "../../constants";
 describe('Newsletter sign-up with Fixture Data', ()=>{
-    beforeEach(() => {
-        cy.visit('https://staging.blavity.com')
-      })
+    
     it('should sign-up with email section 1 within Latest News', () =>{
         cy.viewport(1920, 1080);    
+        cy.visit('https://staging.blavity.com')
         // cy.visit(constants.URL_STG_BLAVITY)
         // cy.visit('https://staging.blavity.com')
         logFunction("This is for test text to log :");
@@ -35,6 +34,7 @@ describe('Newsletter sign-up with Fixture Data', ()=>{
     })
     it('should sign-up with email section 2 before blavity editorial', () =>{
         cy.viewport(1920, 1080);
+        cy.visit('https://staging.blavity.com')
         Cypress.on('uncaught:exception', (err, runnable) => { return false; });
         cy.wait(5000);
         cy.get('.loader')
@@ -61,6 +61,7 @@ describe('Newsletter sign-up with Fixture Data', ()=>{
     })    
     it('should sign-up with email section 3 within footer', () =>{
         cy.viewport(1920, 1080);
+        cy.visit('https://staging.blavity.com')
         Cypress.on('uncaught:exception', (err, runnable) => { return false; });
         cy.fixture('email').then(function(email_3)
         {
@@ -84,6 +85,7 @@ describe('Newsletter sign-up with Fixture Data', ()=>{
     })
     it('should sign-up with email section 4 within hamburger menu', () =>{
         cy.viewport(1920, 1080);
+        cy.visit('https://staging.blavity.com')
         Cypress.on('uncaught:exception', (err, runnable) => { return false; });
         cy.fixture('email').then(function(email_4)
         {
@@ -105,6 +107,7 @@ describe('Newsletter sign-up with Fixture Data', ()=>{
     })
     it('should sign-up with email for "Newsletter" in Navbar section 5 at the top of page', () =>{
         cy.viewport(1920, 1080);
+        cy.visit('https://staging.blavity.com')
         Cypress.on('uncaught:exception', (err, runnable) => { return false; });
         cy.get('[class="heading-h1 mb-4 text-neutral-black lg:mb-0"]')
         .scrollIntoView()
