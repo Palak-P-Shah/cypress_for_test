@@ -34,6 +34,9 @@ describe('Newsletter sign-up with Fixture Data', ()=>{
     it('should sign-up with email section 2 before blavity editorial', () =>{
         cy.viewport(1920, 1080);
         Cypress.on('uncaught:exception', (err, runnable) => { return false; });
+        cy.wait(5000);
+        cy.get('.loader')
+        .should('not.exist');
         cy.fixture('email').then(function(email_2)
         {
             Cypress.on('uncaught:exception', (err, runnable) => { return false; });
