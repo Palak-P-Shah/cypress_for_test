@@ -6,9 +6,9 @@ module.exports = defineConfig({
   // experimentalMemoryManagement: true, 
   screenshotOnRunFailure: false,
   // modifyObstructiveCode:false,
-  //"env": { 
-   // "allureResultsPath": "allure-results",
-  //  },  
+  "env": { 
+    "allureResultsPath": "allure-results",
+    },  
   e2e: {
     supportFile: false,
     setupNodeEvents(on, config) {
