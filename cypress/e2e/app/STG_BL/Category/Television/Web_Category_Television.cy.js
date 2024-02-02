@@ -20,7 +20,9 @@ describe('Test Suite To Test Multiple Conditions in Television Page', function()
     })
 
     it('get count of articles on the Television Page', () => {
-      cy.wait(10000)
+      cy.wait(20000)
+      cy.get('.loader')
+      .should('not.exist');
       cy.viewport(1920, 1080);
     //   Cypress.on('uncaught:exception', (err, runnable) => { return false; })
       //cy.get('[class=""]')
