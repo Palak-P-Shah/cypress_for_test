@@ -5,6 +5,9 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 describe('Test Suite To Test Multiple Conditions in Film Page', function() 
 {
+    beforeEach(() => {
+      cy.visit(constants.URL_STG_BL_CAT_FILM)
+    })
     it('get and check Title of the Film Page', () => {
         Cypress.on('uncaught:exception', (err, runnable) => { return false; })
         //set the viewport
@@ -25,9 +28,9 @@ describe('Test Suite To Test Multiple Conditions in Film Page', function()
       cy.title().should('eq','Film - Blavity News')
       //set the viewport
       cy.viewport(1920, 1080);
-      cy.wait(2000);
-      cy.get('.loader')
-      .should('not.exist');
+      //cy.wait(2000);
+      //cy.get('.loader')
+      //.should('not.exist');
       //cy.get('[class=""]')
       cy.get('[class="flex overflow-x-auto lg:gap-x-6"]')
       .find('li')
