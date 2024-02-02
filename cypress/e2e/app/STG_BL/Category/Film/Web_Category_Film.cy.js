@@ -1,4 +1,4 @@
-import { constants } from "../../../constants";
+import { constants } from "../../../../../constants";
 Cypress.on('uncaught:exception', (err, runnable) => {
   return false;
 });
