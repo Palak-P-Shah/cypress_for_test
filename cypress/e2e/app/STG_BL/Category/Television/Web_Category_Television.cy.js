@@ -347,7 +347,9 @@ describe('Test Suite To Test Multiple Conditions in Television Page', function()
       //cy.get('[class=""]')
       // ShodowAndAct Header section is present or not
       cy.get('[class="grid gap-10 lg:gap-8 lg:grid-cols-4"]')
+      .should('be.visible')
       .children()
+      
       .its('length')
       .should('eq', 8)
       //cy.screenshot()
