@@ -7,8 +7,9 @@ describe('Test Suite To Test Multiple Conditions in Film Page', function()
 {
     beforeEach(() => 
     {
-          cy.visit(constants.URL_STG_BL_CAT_FILM)
           cy.viewport(1920, 1080);
+          cy.visit("https://staging.blavity.com/entertainment/category/film")
+          
           Cypress.on('uncaught:exception', (err, runnable) => { return false; })
     })
     it('Check Whether Sample Article of Film Page is working as expected or not', () => {
@@ -43,7 +44,7 @@ describe('Test Suite To Test Multiple Conditions in Film Page', function()
       cy.intercept('POST',tmp_url)
       .as('getArticle');
       cy.wait('@getArticle', {timeout: 8000})
-      cy.wait(6000)
+      // cy.wait(6000)
       cy.get('@textTitle').then((textTitle) => {
         cy.log('Title is: ' + textTitle) //prints name
         tmp_title = textTitle + ' - Blavity'
