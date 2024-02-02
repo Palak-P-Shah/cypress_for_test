@@ -1,20 +1,16 @@
 import { constants } from "../../../../../constants";
-Cypress.on('uncaught:exception', (err, runnable) => {
-  return false;
-});
+
 
 describe('Test Suite To Test Multiple Conditions in Film Page', function() 
 {
-    beforeEach(() => 
-    {
-          cy.viewport(1920, 1080);
-          cy.visit(constants.URL_STG_BL_CAT_FILM)
-          Cypress.on('uncaught:exception', (err, runnable) => { return false; })
-          cy.get('.loader')
-          .should('not.exist');
-    })
+    
     it('Check Whether Sample Article of Film Page is working as expected or not', () => {
-      // cy.wait(10000)
+      cy.viewport(1920, 1080);
+      cy.visit(constants.URL_STG_BL_CAT_FILM)
+      Cypress.on('uncaught:exception', (err, runnable) => { return false; })
+      cy.get('.loader')
+      .should('not.exist');
+      
       cy.get('[class="pt-4 px-4 lg:px-0 lg:flex-1 lg:flex lg:flex-col"]')
       .first()
       .find('a span')
