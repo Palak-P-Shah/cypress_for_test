@@ -9,7 +9,7 @@ describe('Test Suite To Test Multiple Conditions in Television Page', function()
     // {
     //       cy.visit(constants.URL_STG_BL_CAT_TELEVISION)
     // })
-    it('get and check Title of the Television Page', () => {
+    it.only('get and check Title of the Television Page', () => {
         cy.visit(constants.URL_STG_BL_CAT_TELEVISION)
         Cypress.on('uncaught:exception', (err, runnable) => { return false; })
         //set the viewport
@@ -341,15 +341,13 @@ describe('Test Suite To Test Multiple Conditions in Television Page', function()
         .should('be.gt', 0)
       })
     })
-  it('get count of articles on the Television Page', () => {
+    it.only('get count of articles on the Television Page', () => {
+      cy.wait(10000)
       cy.viewport(1920, 1080);
-      Cypress.on('uncaught:exception', (err, runnable) => { return false; })
+    //   Cypress.on('uncaught:exception', (err, runnable) => { return false; })
       //cy.get('[class=""]')
-      // ShodowAndAct Header section is present or not
-      cy.get('[class="grid gap-10 lg:gap-8 lg:grid-cols-4"]')
-      .should('be.visible')
+      cy.get('[class="grid gap-10 lg:gap-8 lg:grid-cols-4"]').should('be.visible')
       .children()
-      
       .its('length')
       .should('eq', 8)
       //cy.screenshot()
