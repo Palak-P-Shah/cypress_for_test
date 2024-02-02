@@ -15,8 +15,10 @@ describe('Test Suite To Test Multiple Conditions in Film Page', function()
     })
     it('Check Whether Sample Article of Film Page is working as expected or not', () => {
       // cy.wait(10000)
-      cy.get('[class="line-clamp-2"]')
+      cy.get('[class="pt-4 px-4 lg:px-0 lg:flex-1 lg:flex lg:flex-col"]')
       .first()
+      .find('a span')
+      .eq(0)
       .invoke('text').as('textTitle');
       let tmp_url = "";
       let tmp_href = '';
