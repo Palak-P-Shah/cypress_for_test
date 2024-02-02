@@ -25,8 +25,9 @@ describe('Test Suite To Test Multiple Conditions in Film Page', function()
       cy.title().should('eq','Film - Blavity News')
       //set the viewport
       cy.viewport(1920, 1080);
-      cy.log("")
-      // 
+      cy.wait(2000);
+      cy.get('.loader')
+      .should('not.exist');
       //cy.get('[class=""]')
       cy.get('[class="flex overflow-x-auto lg:gap-x-6"]')
       .find('li')
