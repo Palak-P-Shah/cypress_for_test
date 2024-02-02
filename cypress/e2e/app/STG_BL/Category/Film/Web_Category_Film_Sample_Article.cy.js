@@ -8,9 +8,10 @@ describe('Test Suite To Test Multiple Conditions in Film Page', function()
     beforeEach(() => 
     {
           cy.viewport(1920, 1080);
-          cy.visit("https://staging.blavity.com/entertainment/category/film")
-          
+          cy.visit(constants.URL_STG_BL_CAT_FILM)
           Cypress.on('uncaught:exception', (err, runnable) => { return false; })
+          cy.get('.loader')
+          .should('not.exist');
     })
     it('Check Whether Sample Article of Film Page is working as expected or not', () => {
       // cy.wait(10000)
