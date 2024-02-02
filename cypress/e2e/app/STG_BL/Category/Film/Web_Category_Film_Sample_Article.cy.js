@@ -12,8 +12,7 @@ describe('Test Suite To Test Multiple Conditions in Film Page', function()
           Cypress.on('uncaught:exception', (err, runnable) => { return false; })
     })
     it('Check Whether Sample Article of Film Page is working as expected or not', () => {
-      
-      
+      cy.wait(10000)
       cy.get('[class="line-clamp-2"]')
       .first()
       .invoke('text').as('textTitle');
