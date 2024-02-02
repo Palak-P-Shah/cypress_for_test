@@ -15,6 +15,7 @@ describe('Test Suite To Test Multiple Conditions in Film Page', function()
       .first()
       .find('a span')
       .eq(0)
+      .should('be.visible')
       .invoke('text').as('textTitle');
       let tmp_url = "";
       let tmp_href = '';
