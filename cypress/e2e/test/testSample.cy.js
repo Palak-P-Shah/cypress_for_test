@@ -116,8 +116,9 @@ describe('Test each category page like News, Politics, Culture, Opinon, Lifestyl
         .should('be.visible')
     })
     it('Verify whether Image of Each Article is present or not', () => {
-        // cy.wait(3000)
+        cy.wait(3000)
         cy.viewport(1920, 1080);
+        cy.screenshot()
         Cypress.on('uncaught:exception', (err, runnable) => { return false; })  
         cy.get('[class="aspect-[4/3] object-cover w-full"]').each(($img, index, $imgs) => {
             cy.wrap($img).scrollIntoView()
@@ -187,7 +188,8 @@ describe('Test each category page like News, Politics, Culture, Opinon, Lifestyl
       })
       it('Check Whether page loads or not for Sample initial article once clicked', () => {
         cy.viewport(1920, 1080);
-        cy.visit(categoryUrl)
+        cy.screenshot()
+        //cy.visit(categoryUrl)
         Cypress.on('uncaught:exception', (err, runnable) => { return false; })  
         cy.get('[class="line-clamp-2"]')
         .eq(0)
