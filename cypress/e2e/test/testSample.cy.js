@@ -121,6 +121,7 @@ describe('Test each category page like News, Politics, Culture, Opinon, Lifestyl
         cy.viewport(1920, 1080);
         Cypress.on('uncaught:exception', (err, runnable) => { return false; })  
         cy.get('[class="aspect-[4/3] object-cover w-full"]').each(($img, index, $imgs) => {
+            cy.wait(1000)
             cy.wrap($img).scrollIntoView()
             // cy.wrap($img).click({force:true});
             cy.wrap($img).then(($imgElement) => {
