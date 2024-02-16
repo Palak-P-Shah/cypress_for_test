@@ -5,7 +5,7 @@ const categoryUrls = [
 'https://staging.blavity.com/categories/news/opinion',
 'https://staging.blavity.com/categories/news/politics',
 'https://staging.blavity.com/categories/news/lifestyle',
-'https://staging.blavity.com/categories/culture'
+'https://staging.blavity.com/categories/news/culture'
                      ]
 
 describe('Test sample article of category pages like News, Politics, Culture, Opinon, Lifestyle', () => {
