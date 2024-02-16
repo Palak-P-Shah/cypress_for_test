@@ -1,8 +1,7 @@
 
 const categoryUrls = [
                         
-'https://staging.blavity.com/categories/news/film',
-'https://staging.blavity.com/categories/news/opinion',
+
 'https://staging.blavity.com/categories/news/politics',
 'https://staging.blavity.com/categories/news/lifestyle',
 'https://staging.blavity.com/categories/news/culture'
