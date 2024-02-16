@@ -193,6 +193,9 @@ describe('Test each category page like News, Politics, Culture, Opinon, Lifestyl
         Cypress.on('uncaught:exception', (err, runnable) => { return false; })  
         cy.get('[class="line-clamp-2"]')
         .eq(0)
+        .scrollIntoView()
+        cy.get('[class="line-clamp-2"]')
+        .eq(0)
         .invoke('text').as('title');
         let tmp_title = '';
         cy.get('[class="lg:flex lg:flex-col lg:border-b lg:border-neutral-black lg:pb-3"]')
