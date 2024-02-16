@@ -117,7 +117,7 @@ describe('Test each category page like News, Politics, Culture, Opinon, Lifestyl
         .should('be.visible')
     })
     it('Verify whether Image of Each Article is present or not', () => {
-        // cy.wait(3000)
+        cy.wait(3000)
         cy.viewport(1920, 1080);
         Cypress.on('uncaught:exception', (err, runnable) => { return false; })  
         cy.get('[class="aspect-[4/3] object-cover w-full"]').each(($img, index, $imgs) => {
