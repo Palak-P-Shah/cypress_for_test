@@ -17,7 +17,7 @@ describe('Test Suite to check whether colon is present above the video in articl
             this.email=email;
           
             cy.get('[class="focus-within:outline-none paragraph-2 bg-main-citron border-b border-main-hornblende-green mx-4 py-3"]')
-            .type('email')
+            //.type('email')
             .scrollIntoView()
             .click({force: true})
             
