@@ -1,9 +1,11 @@
-describe('Fetch URLs of article with Load More', () => {
+describe('Fetch URLs of class "text-h3-mobile" with Load More', () => {
     // Define an array of URLs to test
     const urlsToTest = [
+        'https://blavity.com/entertainment/category/film',
         'https://blavity.com/entertainment/category/television',
         'https://blavity.com/entertainment/category/unscripted',
-        'https://blavity.com/categories/culture'
+        'https://blavity.com/categories/news/interviews-sa-originals'
+        
         // Add more URLs as needed
     ];
 
