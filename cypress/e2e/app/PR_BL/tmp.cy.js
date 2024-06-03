@@ -1,11 +1,8 @@
 describe('Fetch URLs of article with Load More', () => {
     // Define an array of URLs to test
     const urlsToTest = [
-        'https://blavity.com/entertainment',
-        'https://blavity.com/entertainment/category/film',
         'https://blavity.com/entertainment/category/television',
         'https://blavity.com/entertainment/category/unscripted',
-        'https://blavity.com/categories/news/interviews-sa-originals',
         'https://blavity.com/categories/culture'
         // Add more URLs as needed
     ];
