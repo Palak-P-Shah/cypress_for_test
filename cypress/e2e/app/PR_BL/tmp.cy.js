@@ -23,7 +23,7 @@ describe('Fetch URLs of class "text-h3-mobile" with Load More', () => {
       };
   
       // Visit the page you want to test
-      cy.visit('https://blavity.com/entertainment/category/film');
+      cy.visit('https://blavity.com/entertainment/category/unscripted');
   
       // Wait for page content to load
       cy.wait(6000);
