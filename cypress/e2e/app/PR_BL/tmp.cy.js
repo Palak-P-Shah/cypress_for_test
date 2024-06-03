@@ -23,7 +23,7 @@ describe('Fetch URLs of class "text-h3-mobile" with Load More', () => {
       };
   
       // Visit the page you want to test
-      cy.visit('https://blavity.com/entertainment/category/unscripted');
+      cy.visit('https://blavity.com/entertainment/category/film');
   
       // Wait for page content to load
       cy.wait(6000);
@@ -41,7 +41,7 @@ describe('Fetch URLs of class "text-h3-mobile" with Load More', () => {
       const clickLoadMore = () => {
         cy.get('[class="button-link border border-main-hornblende-green max-w-[198px] py-[13px] w-full"]').then($btn => {
           if ($btn.length > 0) {
-            cy.wrap($btn).click();
+            cy.wrap($btn).click({force:true});
             cy.wait(6000); // Wait for new content to load
             fetchUrls(); // Fetch URLs from the new content
             clickLoadMore(); // Recursive call to handle more clicks
